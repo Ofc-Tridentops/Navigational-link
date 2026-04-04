@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3-Div Glass Interface</title>
+    <style>
+        body {
+            background: radial-gradient(circle, #1b2735 0%, #090a0f 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+       
+        .container {
+            display: flex;
+            gap: 40px;
+            position: relative;
+            align-items: center;
+        }
+
+        
+        .glass-box {
+            width: 320px;
+            min-height: 400px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 25px;
+            color: white;
+            text-align: center;
+            z-index: 2; /* Sits on top of the tube */
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+            display: flex;
+            flex-direction: column;
+        }
+
+      
+        .box-2 {
+            transform: scale(1.2);
+            z-index: 5; 
+            background: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            box-shadow: 0 40px 80px rgba(0,0,0,0.8);
+        }
+
+        .box-image {
+            width: 100%;
+            height: auto;
+            background: #222;
+            margin: 15px 0;
+            border-radius: 15px;
+            object-fit: contain;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        h2 { font-size: 1.2rem; margin: 5px 0; }
+        .box-1 { color: gold; }
+        .box-3 { color: #00d4ff; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="glass-box box-1">
+            <h2>ALPHA</h2>
+            <img src="Romans_3_20.png" alt="Image 1" class="box-image">
+            <p>Our sins have been taken away</p>
+        </div>
+
+        <div class="glass-box box-2">
+            <h2 style="color: #a855f7;">CORE</h2>
+             <img src="Isaiah_53_5-6.jpg" alt="Image 2" class="box-image">
+            <p>Prophecy</p>
+        </div>
+
+        <div class="glass-box box-3">
+            <h2>OMEGA</h2>
+            <img src="Jeremiah_33_3.png" alt="Image 3" class="box-image">
+            <p>Just Call unto Him</p>
+        </div>
+    </div>
+
+</body>
+</html>
